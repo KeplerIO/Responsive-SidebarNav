@@ -1,0 +1,174 @@
+/* variables */
+:root {
+  --color-teal: #0b57a5;
+  --color-midnight-blue: #003061;
+  --color-faded-orange: #f9bb94;
+  --color-lava: #f89021;
+}
+
+/******************************************************************************/
+/* GLOBAL STYLE SECTION */
+/******************************************************************************/
+
+/** {
+  border: 1px solid red;
+}*/
+
+
+
+/******************************************************************************/
+/* MOBILE STYLE SECTION */
+/******************************************************************************/
+.menu-icon {
+  color: var(--color-lava);
+}
+
+/* Positions header  */
+.header {
+  position: absolute;
+  height: 35px;
+  width: 100%;
+  background-color: var(--color-faded-orange);
+  z-index: 2;
+}
+
+/* Positions and styles the menu/exit icon on mobile view */
+.header span.menu-btn {
+  margin-top: 5px;
+  padding: 5px;
+  color: var(--color-teal);
+  background-color: var(--color-lava);
+}
+
+/* Position navbar, colors it as well */
+.side-nav {
+  position: absolute;
+  width: 100%;
+  background-color: var(--color-teal);
+  height: 100vh;
+  padding-top: 35px;
+  z-index: 1;
+}
+
+/* Styles the list of menu items */
+.side-nav nav ul {
+  list-style: none;
+  padding: 0px;
+}
+
+/* Styles and positions the list items (the actual menu items themselves) */
+.side-nav ul li {
+  padding: 20px 10px;
+  border-bottom: 1px solid black;
+}
+
+/* Hover state styles for list items (the actual menu items themselves) */
+.side-nav ul li:hover{
+  background-color: var(--color-midnight-blue);
+  color: var(--color-lava);
+  cursor: pointer;
+}
+
+/* Styles the text inside of the menu items */
+.side-nav ul li a {
+  display: block;
+  color: var(--color-faded-orange);
+  height: 100%;
+  width: inherit;
+  user-select: none;
+}
+
+/* Hover state styles for menu item text */
+.side-nav ul li a:hover {
+  text-decoration: none;
+}
+
+/* Click state styles for menu item text */
+.side-nav ul li a:active {
+  text-decoration: none;
+  -webkit-user-select: none;
+  color: var(--color-lava);
+}
+
+/* Focus state styles for menu item text */
+.side-nav ul li a:focus {
+  color: var(--color-lava);
+  text-decoration: none;
+}
+
+/* Positions the text of the menu items*/
+.side-nav li a span:nth-child(2) {
+  margin-left: 15px;
+}
+
+/******************************************************************************/
+/* TABLET STYLE SECTION */
+/******************************************************************************/
+@media screen and (min-width: 600px) {
+  /* Hide the header in tablet view */
+  .header {
+    display: none;
+  }
+
+  /* New width for the sidebar on tablet view */
+  .side-nav {
+    width: 70px;
+    padding-top: 0;
+  }
+
+  /* Hides the menu item text on tablet view */
+  .side-nav li a span:nth-child(2) {
+    display: none;
+  }
+
+  /* Centers menu item icons in their menu items in tablet view */
+  .side-nav ul li {
+    text-align: center;
+  }
+
+  /* Hover state styles for menu item icons in tablet view */
+  .side-nav ul li span:hover {
+    color: var(--color-lava);
+  }
+
+  /* Positions the body content in regards to the sidebar in tablet view */
+  .body-content {
+    padding-top: 0;
+    margin-left: 70px;
+  }
+
+  /******************************************************************************/
+  /* DESKTOP STYLE SECTION */
+  /******************************************************************************/
+  @media screen and (min-width: 1079px) {
+    .row {
+      margin-right: 0px;
+    }
+
+    /* Hide the header in tablet view */
+    .header {
+      display: none;
+    }
+
+    /* New width for the sidebar on tablet view */
+    .side-nav {
+      width: 250px;
+      padding-top: 0;
+    }
+
+    /* Hides the menu item text on tablet view */
+    .side-nav li a span:nth-child(2) {
+      display:inline;
+    }
+
+    /* Left-aligns menu item icons in their menu items in tablet view */
+    .side-nav ul li {
+      text-align: left;
+    }
+
+    /* Positions the body content in regards to the sidebar in tablet view */
+    .body-content {
+      margin-left: 250px;
+      padding-top: 0;
+    }
+  }
