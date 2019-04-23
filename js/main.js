@@ -1,13 +1,8 @@
-//Begin listeners
-init();
-
-//Runs functions that aren't invoked/called (listeners)
+//If anymore listenters get written, invoke them here.
 function init() {
   hoverListener();
 }
 
-//Menu item hover styling is handled with a script to
-//be consistant across different device views
 function hoverListener() {
   $('.menu-item').on('mouseover', function(e){
     $(this).children().find('span').addClass('menu-icon');
@@ -18,4 +13,6 @@ function hoverListener() {
   });
 }
 
+init();
 console.log($('.menu-item').siblings());
+
